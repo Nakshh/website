@@ -5,7 +5,6 @@ class Contact extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const name = this.props.data.name;
     const contactname = this.props.data.contactname;
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
