@@ -1,0 +1,202 @@
+<template>
+	<nav>
+		<div class="name" id="name">
+			<h1>Nakshh Kohli</h1>
+		</div>
+		<ul>
+			<a
+				href="https://twitter.com/nakshhkohli"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li class="first"><i class="fab fa-twitter fa-lg"></i></li>
+			</a>
+			<a
+				href="https://instagram.com/nakshhkohli"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-instagram fa-lg"></i></li>
+			</a>
+			<a
+				href="https://github.com/nakshhkohli"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fab fa-github fa-lg"></i></li>
+			</a>
+			<a
+				href="mailto:nakshhkohli04@gmail.com"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fas fa-envelope fa-lg"></i></li>
+			</a>
+			<a
+				href="https://www.linkedin.com/in/nakshhkohli/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li><i class="fa fa-linkedin-square fa-lg"></i></li>
+			</a>
+			<a
+				href="CV.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<li class="last">
+					<div style="color:white">My Resume</div>
+				</li>
+			</a>
+	</ul>
+	</nav>
+</template>
+
+<script>
+export default {
+	name: "Navbar",
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+nav {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.name {
+	display: flex;
+	align-items: flex-end;
+}
+
+.name h1 {
+	margin: 0 0 0 0;
+	font-size: 1.8rem;
+	font-weight: 600;
+	border-bottom: 10px solid #204665;
+	width: 175px;
+	line-height: 0.4;
+}
+
+ul {
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+li {
+	margin-left: 2rem;
+	padding: 10px;
+	display: flex;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	background-color: #1b405e;
+	transition: all ease 0.2s;
+}
+
+li:hover {
+	background-color: #15334b;
+	transform: translateY(-5px);
+	transition: all ease 0.2s;
+}
+
+.fa-twitter {
+	color: #2bf1ff;
+}
+
+.fa-instagram {
+	color: #c457ff;
+}
+
+.fa-github {
+	color: #3ed3a1;
+}
+
+.fa-envelope {
+	color: #e3655b;
+}
+
+.fa-linkedin-square {
+	color: #228cdb;
+}
+
+.fa-paperclip {
+	color: white;
+}
+
+@media screen and (max-width: 1250px) {
+	nav {
+		flex-direction: column;
+		margin-top: 3rem;
+	}
+
+	li {
+		margin-left: 0;
+		margin-right: 2rem;
+	}
+
+	ul {
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-inline-start: 0;
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	ul {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.first {
+		margin-right: 2rem;
+		margin-left: 0;
+	}
+
+	.last {
+		margin: 0;
+		color:white;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	li {
+		margin-right: 1rem;
+	}
+
+	.first {
+		margin-right: 1rem;
+		margin-left: 0;
+	}
+
+	.last {
+		margin: 0;
+	}
+
+	i {
+		height: 80%;
+	}
+}
+</style>

@@ -1,0 +1,86 @@
+
+# all sub redirects
+https://nakshhkohli.com/morph https://nakshhkohli.com/morph/index.html 302
+https://nakshhkohli.com/morph/* https://morph-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/obstacles https://nakshhkohli.com/obstacles/index.html 302
+https://nakshhkohli.com/obstacles/* https://obstacles-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/graph https://nakshhkohli.com/graph/index.html 302
+https://nakshhkohli.com/graph/* https://graph-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/tictactoe https://nakshhkohli.com/tictactoe/index.html 302
+https://nakshhkohli.com/tictactoe/* https://tictactoe-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/pi2 https://nakshhkohli.com/pi2/index.html 302
+https://nakshhkohli.com/pi2/* https://pi2-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/pi https://nakshhkohli.com/pi/index.html 302
+https://nakshhkohli.com/pi/* https://pi-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/yoda https://nakshhkohli.com/yoda/index.html 302
+https://nakshhkohli.com/yoda/* https://yoda-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/enigma https://nakshhkohli.com/enigma/index.html 302
+https://nakshhkohli.com/enigma/* https://enigma-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/visualise https://nakshhkohli.com/visualise/index.html 302
+https://nakshhkohli.com/visualise/* https://visualise-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/maze https://nakshhkohli.com/maze/index.html 302
+https://nakshhkohli.com/maze/* https://maze-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/snake https://nakshhkohli.com/snake/index.html 302
+https://nakshhkohli.com/snake/* https://snake-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/clock https://nakshhkohli.com/clock/index.html 302
+https://nakshhkohli.com/clock/* https://clock-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/paint https://nakshhkohli.com/paint/index.html 302
+https://nakshhkohli.com/paint/* https://paint-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/jockycipher https://nakshhkohli.com/jockycipher/index.html 302
+https://nakshhkohli.com/jockycipher/* https://jockycipher-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/v1 https://nakshhkohli.com/v1/index.html 302
+https://nakshhkohli.com/v1/* https://v1-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/v2 https://nakshhkohli.com/v2/index.html 302
+https://nakshhkohli.com/v2/* https://v2-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/autocats https://nakshhkohli.com/autocats/index.html 302
+https://nakshhkohli.com/autocats/* https://autocats-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/dogs https://nakshhkohli.com/dogs/index.html 302
+https://nakshhkohli.com/dogs/* https://dogs-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/blog https://nakshhkohli.com/blog/index.html 302
+https://nakshhkohli.com/blog/* https://blog-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/gravity https://nakshhkohli.com/gravity/index.html 302
+https://nakshhkohli.com/gravity/* https://gravity-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/agastya https://nakshhkohli.com/agastya/index.html 302
+https://nakshhkohli.com/agastya/* https://agastya-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/lottietest https://nakshhkohli.com/lottietest/index.html 302
+https://nakshhkohli.com/lottietest/* https://lottietest-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/fourier-series https://nakshhkohli.com/fourier-series/index.html 302
+https://nakshhkohli.com/fourier-series/* https://fourier-series-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/fourier https://nakshhkohli.com/fourier/index.html 302
+https://nakshhkohli.com/fourier/* https://fourier-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/tree https://nakshhkohli.com/tree/index.html 302
+https://nakshhkohli.com/tree/* https://tree-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/lila https://nakshhkohli.com/lila/index.html 302
+https://nakshhkohli.com/lila/* https://lila-nakshhkohli.netlify.app/:splat 200!
+
+https://nakshhkohli.com/decision https://nakshhkohli.com/decision/index.html 302
+https://nakshhkohli.com/decision/* https://decision-nakshhkohli.netlify.app/:splat 200!
+
+
+# all github redirects
+https://nakshhkohli.com/gh/* https://github.com/nakshhkohli/:splat 302
