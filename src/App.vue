@@ -53,7 +53,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	color: white;
+	color: rgb(124, 124, 124);
 	text-align: center;
 }
 
