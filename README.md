@@ -1,14 +1,12 @@
+# nakshhkohli.com
 
-# Run Project Locally
-### 1. Clone the project
+### 👀 My personal website
 
-### 2. Run the project
-```shell
-npm i
-npm start
-```
+Hosted at https://nakshhkohli.com
 
-### 3. Build
-```shell
-npm run build
-```
+Netlify status here please 
+* Clone the website
+* Grab dependencies with `npm i`
+* Serve with `npm start`
+
+Technologies used: Vue.js, Font Awesome

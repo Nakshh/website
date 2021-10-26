@@ -1,48 +1,31 @@
 {
-  "name": "reactniceresume",
+  "name": "nakshhkohli.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "anix": "^1.3.6",
-    "jquery": "^3.6.0",
-    "particles-bg": "^2.5.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-ga": "^3.3.0",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "4.0.3",
-    "react-zmage": "^0.8.5-beta.36",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "serve": "vue-cli-service serve",
+    "build": "node redirects/prebuild.js && vue-cli-service build && netlify-lambda build functions",
+    "deploy": "git add -A && git commit -m 'redirects' && git push",
+    "start": "npm run serve"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "aos": "^3.0.0-beta.6",
+    "encoding": "^0.1.13",
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "netlify-lambda": "^2.0.1",
+    "node-fetch": "^2.6.0",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
-    "chokidar": "^3.5.1"
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "@vue/cli-plugin-router": "^4.5.2",
+    "@vue/cli-service": "~4.4.0",
+    "vue-template-compiler": "^2.6.11"
   }
 }
