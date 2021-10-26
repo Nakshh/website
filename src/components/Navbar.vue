@@ -19,14 +19,14 @@
 				<li><i class="fab fa-instagram fa-lg"></i></li>
 			</a>
 			<a
-				href="https://github.com/nakshhkohli"
+				href="https://github.com/nakshh"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
 				<li><i class="fab fa-github fa-lg"></i></li>
 			</a>
 			<a
-				href="mailto:nakshhkohli04@gmail.com"
+				href="mailto:nakshh764@gmail.com"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
