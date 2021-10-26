@@ -54,7 +54,6 @@ export default {
 	flex-direction: column;
 	justify-content: space-between;
 	color: white;
-	margin-left: 2rem;
 	text-align: center;
 }
 
