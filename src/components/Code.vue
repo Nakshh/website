@@ -47,7 +47,7 @@ export default {
 				{
 					title: "Shrek 3",
 					emoji: "🍿",
-					link: "#",
+					link: "https://github.com/Nakshh/shrek",
 				},
 				{
 					title: "Maze",
