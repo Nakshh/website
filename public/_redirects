@@ -27,8 +27,8 @@ https://nakshhkohli.com/jockycipher/* https://jockycipher-nakshhkohli.netlify.ap
 https://nakshhkohli.com/gravity https://nakshhkohli.com/gravity/index.html 302
 https://nakshhkohli.com/gravity/* https://gravity-nakshhkohli.netlify.app/:splat 200!
 
-
-https://nakshhkohli.com/tree/* https://tree-nakshhkohli.netlify.app/:splat 200
+https://nakshhkohli.com/tree https://nakshhkohli.com/tree/index.html 302
+https://nakshhkohli.com/tree/* https://tree-nakshhkohli.netlify.app/:splat 200!
 
 
 # all github redirects
