@@ -11,3 +11,5 @@ Hosted at https://nakshhkohli.com
 * Serve with `npm start`
 
 Technologies used: Vue.js, Font Awesome
+
+TODO: Redirects (200!) for each project
