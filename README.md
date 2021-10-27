@@ -12,4 +12,6 @@ Hosted at https://nakshhkohli.com
 
 Technologies used: Vue.js, Font Awesome
 
-TODO: Redirects (200!) for each project
+TODO:
+* Redirects (200!) for each project
+* Make use of REST API
