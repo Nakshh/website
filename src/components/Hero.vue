@@ -20,15 +20,22 @@
 						class="orange"
 						href="https://ethniquemojo.com"
 						>Ethnique Mojo</a
+					> and
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						class="orange"
+						href="https://happinessproject.co.in"
+						>Happiness Project</a
 					>. I'm an avid web developer with a focus on front-end and
-					back-end in Node.js.
+					back-end in Node.js. I also love making games and using CS
+					to create small fun projects.
 				</p>
 				<p class="b-margin">
-					I also do this and that and this and that and this and that
-					and that and this and that and this and that and that and
-					this and that and this and that and this and that and this and
-					this and that and this and that and this and that and this
-					and that and this.
+					You can see some of my programs below along with other projects
+					I have worked on. Apart from computer science I have taken up
+					intereCheck out my linkedin and my resume for more
+					information.
 				</p>
 				<p>
 					I also do this and that and this and that and this and that
