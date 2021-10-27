@@ -37,7 +37,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<li><i class="fa fa-linkedin-square fa-lg"></i></li>
+				<li><i class="fab fa-linkedin fa-lg"></i></li>
 			</a>
 			<a
 				href="CV.pdf"
@@ -137,7 +137,7 @@ li:hover {
 	color: #e3655b;
 }
 
-.fa-linkedin-square {
+.fa-linkedin {
 	color: #228cdb;
 }
 
