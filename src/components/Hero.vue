@@ -35,7 +35,7 @@
 					You can see some of my programs below along with other projects
 					I have worked on. Apart from computer science I have taken up
 					intereCheck out my linkedin and my resume for more
-					information.
+					information. Will update soon
 				</p>
 				<p>
 					I also do this and that and this and that and this and that
