@@ -42,7 +42,7 @@ export default {
 				{
 					title: "Tree",
 					emoji: "🌲",
-					link: "https://www.tree-nakshhkohli.netlify.com",
+					link: "https://tree-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Shrek 3",
