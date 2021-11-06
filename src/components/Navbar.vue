@@ -77,7 +77,7 @@ nav {
 	font-size: 1.8rem;
 	font-weight: 600;
 	border-bottom: 10px solid #204665;
-	width: 175px;
+	width: 179px;
 	line-height: 0.4;
 }
 
