@@ -27,22 +27,18 @@
 						class="orange"
 						href="https://happinessproject.co.in"
 						>Happiness Project</a
-					>. I'm an avid web developer with a focus on front-end and
-					back-end in Node.js. I also love making games and using CS
-					to create small fun projects.
+					>. Since 2015, computer science has been one of my pillars of
+					interests. I am a web developer, and can make quite a few games
+					in a few languages. This website has been made using vue. The
+					source code is available on my Github.	
 				</p>
 				<p class="b-margin">
-					You can see some of my programs below along with other projects
-					I have worked on. Apart from computer science I have taken up
-					intereCheck out my linkedin and my resume for more
-					information. Will update soon
+					On here, you can see some of my programsalong with other
+					projects I have worked on. If interested about my work away
+					from computer science, you can check my Linkdin and Resume. 
 				</p>
 				<p>
-					I also do this and that and this and that and this and that
-					and that and this and that and this and that and that and
-					this and that and this and that and this and that and this and
-					this and that and this and that and this and that and this
-					and that and <span class="color">this</span>.
+					<span class="color">this</span>.
 				</p>
 			</div>
 		</div>
