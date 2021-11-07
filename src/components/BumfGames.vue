@@ -23,9 +23,9 @@ export default {
 		return {
 			song1: "Rocket League",
 			artist1: "D3",
-			song2: "Splitgate",
+			song2: "GTA V",
 			artist2: null,
-			song3: "House of Ashes",
+			song3: "Fifa 22",
 			artist3: null,
 		};
 	},

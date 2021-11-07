@@ -113,7 +113,7 @@ h1 {
 
 p {
 	font-weight: 300;
-	font-size: 1.1rem;
+	font-size: 1.15rem;
 	line-height: 1.3;
 	/* text-align: justify; */
 }

@@ -1,10 +1,14 @@
 <template>
 	<div>
-		<h1>BUMF</h1>
+		<h1>Bumf</h1>
 		<p>
-			I know how to code in JS, Java, Python, a little bit of C, and my personal favourite <span class="color">Scratch</span>.
-			This website was built using vue and is far from finished. Hopefully the changes in this website reflect
-			the new skills I learn through my journey of pursuing CS.
+			This website is set in Gibson, and uses Font Awesome for all the icons.
+			It's coded in Vue.js and uses Netlify functions. I plan to implement some
+			cool APIs in the near future. You can visit the source
+			<a href="https://www.github.com/nakshh/nakshhkohli.com">here</a> if you see something you like!
+			My <a href="https://www.github.com/nakshh/">Github</a> has the source to all the projects
+			showcased here as well.
+			
 			
 		</p>
 	</div>
