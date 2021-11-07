@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>Games</h1>
-		<p>The current games I am playing are listed below</p>
+		<p>The current games I am playing are listed below (Ill probably use some fancy api here in the near future)</p>
 		<ul>
 			<li>
 				{{ song1 }} 
