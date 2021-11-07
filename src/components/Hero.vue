@@ -29,8 +29,8 @@
 						>Happiness Project</a
 					>. I am also an aspiring developer, and have pursued computer
 					science for the past 5 years. I know how to code in JS, Java, Python, 
-					a little bit of C, and my personal favourite <span class="color">Scratch :)</span>
-					This website was built using vue and is far from finished. Hopefully the 
+					a little bit of C, and my personal favourite <span class="color">Scratch</span>
+					This website was built using vue.js and is far from finished. Hopefully the 
 					changes in this website reflect the new skills I learn through my journey of pursuing CS.
 
 				</p>
