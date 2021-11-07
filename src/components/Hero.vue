@@ -28,16 +28,32 @@
 						href="https://happinessproject.co.in"
 						>Happiness Project</a
 					>. I am also an aspiring developer, and have pursued computer
-					science for the past 5 years using YT videos and online courses
+					science for the past 5 years. I know how to code in JS, Java, Python, 
+					a little bit of C, and my personal favourite <span class="color">Scratch :)</span>
+					This website was built using vue and is far from finished. Hopefully the 
+					changes in this website reflect the new skills I learn through my journey of pursuing CS.
 
 				</p>
 				<p class="b-margin" align="justify">
-					On here, you can see some of my programs along with other
-					projects I have worked on. I hope the progess of this website
-					mimics my progress in computer science, as I intend to update
-					it regularly with any new stuff I have done.
-					If interested about my work away from computer science, you 
-					can check my <a class="color" href="https://www.linkedin.com/in/nakshhkohli/">Linkedin</a> and <a class="color" href="CV.pdf">Resume</a>. 
+					Apart from computer science, I have a keen interest in entrepreneurship,
+					I also love playing golf! If interested about my work away from computer science, you 
+					can check my
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						class="orange"
+						href="https://www.linkedin.com/in/nakshhkohli/"
+						>Linkedin</a
+					> and
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						class="orange"
+						href="CV.pdf"
+						>Resume</a
+					>.
+					
+					<!--<a class="color" href="https://www.linkedin.com/in/nakshhkohli/">Linkedin</a> and <a class="color" href="CV.pdf">Resume</a>.-->
 				</p>
 			</div>
 		</div>
