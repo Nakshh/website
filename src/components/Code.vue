@@ -57,7 +57,7 @@ export default {
 				{
 					title: "Logo Maker",
 					emoji: "💮",
-					link: "#",
+					link: "https://logo-maker-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Tic Tac Toe",
