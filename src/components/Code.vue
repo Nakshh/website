@@ -87,7 +87,7 @@ export default {
 				{
 					title: "Snake",
 					emoji: "🐍",
-					link: "#",
+					link: "https://snake-nakshhkohli.netlify.app",
 				},
 			],
 		};
