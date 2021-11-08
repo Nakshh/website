@@ -40,19 +40,24 @@ export default {
 					link: "https://www.happinessproject.co.in",
 				},
 				{
-					title: "Tree",
-					emoji: "🌲",
-					link: "https://tree-nakshhkohli.netlify.app",
-				},
-				{
-					title: "Shrek 3",
-					emoji: "🍿",
-					link: "https://github.com/Nakshh/shrek",
-				},
-				{
 					title: "Maze",
 					emoji: "🧩",
-					link: "#",
+					link: "https://maze-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Cipher",
+					emoji: "🔑",
+					link: "https://cipher-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Rubiks Cube",
+					emoji: "",
+					link: "https://cube-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Game",
+					emoji: "🚀",
+					link: "https://game-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Logo Maker",
@@ -60,35 +65,60 @@ export default {
 					link: "https://logo-maker-nakshhkohli.netlify.app",
 				},
 				{
-					title: "Tic Tac Toe",
-					emoji: "❌",
-					link: "#",
+					title: "Mic Balls",
+					emoji: "🎙",
+					link: "https://mic-balls-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Shrek 3",
+					emoji: "🍿",
+					link: "https://github.com/Nakshh/shrek",
+				},
+				{
+					title: "Chat",
+					emoji: "💬",
+					link: "https://chat-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Fourier",
+					emoji: "⭕️",
+					link: "https://fourier-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Graph",
 					emoji: "📈",
-					link: "#",
+					link: "https://graph-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Paint",
 					emoji: "🎨",
-					link: "#",
+					link: "https://paint-nakshhkohli.netlify.app",
 				},
 				{
-					title: "Cipher",
-					emoji: "🔑",
-					link: "#",
+					title: "Tree",
+					emoji: "🌲",
+					link: "https://tree-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Clock",
 					emoji: "🕒",
-					link: "#",
+					link: "https://clock-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Snake",
 					emoji: "🐍",
 					link: "https://snake-nakshhkohli.netlify.app",
 				},
+				{
+					title: "Todo",
+					emoji: "✅",
+					link: "https://todo-nakshhkohli.netlify.app",
+				},
+				{
+					title: "Astrology Pictures Every Day",
+					emoji: "🪐",
+					link: "https://nasa-nakshhkohli.netlify.app",
+				}
 			],
 		};
 		// eslint-disable-next-line no-unreachable
