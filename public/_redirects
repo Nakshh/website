@@ -1,7 +1,7 @@
 
 # all sub redirects
 https://nakshhkohli.com/morph https://nakshhkohli.com/morph/index.html 302
-https://nakshhkohli.com/morph/* https://morph-nakshhkohli.netlify.app/:splat 200!
+https://nakshhkohli.com/morph/* https://logo-maker-nakshhkohli.netlify.app/:splat 200!
 
 https://nakshhkohli.com/graph https://nakshhkohli.com/graph/index.html 302
 https://nakshhkohli.com/graph/* https://graph-nakshhkohli.netlify.app/:splat 200!
