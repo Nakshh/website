@@ -29,12 +29,14 @@
 						>Happiness Project</a
 					>. I am also an aspiring developer, and have pursued computer
 					science for the past 5 years. I know how to code in JS, Java, Python, 
-					a little bit of C, and my personal favourite <span class="color">Scratch</span>
-					This website was built using vue.js and is far from finished. Hopefully the 
+					and C. This website is set in Gibson, and uses Font Awesome for all the icons.
+					It's coded in Vue.js and uses Netlify functions. I plan to implement some
+					cool APIs in the near future. You can visit the source
+					<a class="orange" href="https://www.github.com/nakshh/nakshhkohli.com">here</a> if you see something you like!
+					My <a class="orange" href="https://www.github.com/nakshh/">Github</a> has the source to all the projects
+					showcased here as well. This website is far from finished and hopefully the 
 					changes in this website reflect the new skills I learn through my journey of pursuing CS.
-
-				</p>
-				<p class="b-margin" align="justify">
+					<br><br>
 					Apart from computer science, I have a keen interest in entrepreneurship,
 					I also love playing golf! If interested about my work away from computer science, you 
 					can check my
@@ -82,6 +84,7 @@ img {
 }
 
 .b-margin {
+	margin-top: 1.4rem;
 	margin-bottom: 1rem;
 }
 
@@ -114,7 +117,7 @@ h1 {
 p {
 	font-weight: 300;
 	font-size: 1.15rem;
-	line-height: 1.3;
+	line-height: 1;
 	/* text-align: justify; */
 }
 

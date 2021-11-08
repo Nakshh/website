@@ -9,7 +9,8 @@
 			<HorizontalDivider></HorizontalDivider>
 			<Code></Code>
 			<HorizontalDivider></HorizontalDivider>
-			<BumfGames></BumfGames>
+			<p class="warn">Last.fm API broke, come back later to either see it fixed or something brand new!</p>
+			<!--<BumfGames></BumfGames>-->
 			<HorizontalDivider></HorizontalDivider>
 			<Footer></Footer>
 		</div>
@@ -22,7 +23,7 @@ import HorizontalDivider from "./components/HorizontalDivider.vue";
 import Hero from "./components/Hero.vue";
 
 import Code from "./components/Code.vue";
-import BumfGames from "./components/BumfGames.vue";
+/*import BumfGames from "./components/BumfGames.vue";*/
 import Footer from "./components/Footer.vue";
 
 export default {
@@ -32,7 +33,7 @@ export default {
 		HorizontalDivider,
 		Hero,
 		Code,
-		BumfGames,
+		/*BumfGames,*/
 		Footer,
 	},
 	data() {

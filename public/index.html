@@ -28,6 +28,15 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>favicon-16x16.png" />
 	<link rel="manifest" href="/site.webmanifest" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		async function getImage(){
+		let response = await fetch('https://api.nasa.gov/planetary/apod?api_key=XeTQVlPB8ft7gOuRGDJsXEUQ6txJTXkfqXMygXGa');
+		console.log(response);
+		let data = await response.json();
+		console.log(data);
+		document.querySelector("#APOD").innerHTML = data.explanation;
+}
+	</script>
 	<link rel="stylesheet" href="https://use.typekit.net/bau0ivl.css" />
 
 	<title>Nakshh Kohli</title>
