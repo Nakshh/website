@@ -51,7 +51,7 @@ export default {
 				},
 				{
 					title: "Rubiks Cube",
-					emoji: "",
+					emoji: "🧊",
 					link: "https://cube-nakshhkohli.netlify.app",
 				},
 				{
@@ -115,7 +115,7 @@ export default {
 					link: "https://todo-nakshhkohli.netlify.app",
 				},
 				{
-					title: "Astrology Pictures Every Day",
+					title: "NASA API",
 					emoji: "🪐",
 					link: "https://nasa-nakshhkohli.netlify.app",
 				}
