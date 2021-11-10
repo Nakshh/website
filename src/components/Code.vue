@@ -65,9 +65,9 @@ export default {
 					link: "https://logo-maker-nakshhkohli.netlify.app",
 				},
 				{
-					title: "Mic Balls",
+					title: "Mic Visuals",
 					emoji: "🎙",
-					link: "https://mic-balls-nakshhkohli.netlify.app",
+					link: "https://mic-nakshhkohli.netlify.app",
 				},
 				{
 					title: "Shrek 3",
