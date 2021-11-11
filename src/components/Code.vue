@@ -183,7 +183,7 @@ h1 {
 	color: white;
 	border-bottom: 10px solid #204665;
 	line-height: 0.4;
-	width: 455px;
+	width: 100px;
 }
 .row {
 	display: flex;

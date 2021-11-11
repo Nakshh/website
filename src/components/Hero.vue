@@ -12,18 +12,16 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					I study at The Shri Ram School, Moulsari
-
-					i did this projects
-
-					i got these languageas
-
-					thats how i used to build this website 
-
-					This website is made with 
-					
-					I plan api in future
-					and founded
+					As an IB student at The Shri Ram School, Moulsari, I take great pride in my work. 
+					In hopes of pursuing computer science, I’ve become fluent in JavaScript, Java, Python, 
+					and C. On this website, you can find all my projects. I created it using Vue.js, and 
+					it uses Netlify functions; I plan on implementing some APIs in the future. If you’re 
+					interested, you can check out the source code <a class="orange" href="https://www.github.com/nakshh/nakshhkohli.com">here</a>. 
+					My <a class="orange" href="https://www.github.com/nakshh/">Github</a> also has the source code 
+					for all my projects. As I improve, I’ll update this website to ensure my programming 
+					skills represent where I am in my journey.
+					<br><br>
+					Apart from computer science, I also have a keen interest in entrepreneurship - I founded
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -37,21 +35,9 @@
 						class="orange"
 						href="https://happinessproject.co.in"
 						>Happiness Project</a
-					>. I aspire to be a working professional in the technology field, and have pursued computer
-					science for the past 5 years. I know how to code in JS, Java, Python, 
-					and C. This website is set in Gibson, and uses Font Awesome for all the icons.
-					It's coded in Vue.js and uses Netlify functions. I plan to implement some
-					cool APIs in the near future. You can visit the source
-					<a class="orange" href="https://www.github.com/nakshh/nakshhkohli.com">here</a> if you see something you like!
-					My <a class="orange" href="https://www.github.com/nakshh/">Github</a> has the source to all the projects
-					showcased here as well. This website is far from finished and hopefully the 
-					changes in this website reflect the new skills I learn through my journey of pursuing CS.
-					<br><br>
-					Apart from computer science, I have a keen interest in entrepreneurship,
-
-					I founded ---
-					I also love playing golf! If interested about my work away from computer science, you 
-					can check my
+					>. Not to mention, I love playing golf in my free time. 
+					If you’re interested about my work away from computer science, 
+					you can check my
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -67,7 +53,8 @@
 						>Resume</a
 					>.
 					
-					<!--<a class="color" href="https://www.linkedin.com/in/nakshhkohli/">Linkedin</a> and <a class="color" href="CV.pdf">Resume</a>.-->
+					
+					
 				</p>
 			</div>
 		</div>
@@ -128,7 +115,7 @@ h1 {
 
 p {
 	font-weight: 300;
-	font-size: 1.15rem;
+	font-size: 1rem;
 	line-height: 1;
 	/* text-align: justify; */
 }
