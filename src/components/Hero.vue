@@ -7,13 +7,23 @@
 		<div class="text">
 			<div class="top-text">
 				<h1>
-					Hi, I'm Nakshh Kohli.
+					Hi, I'm a Developer.
 				</h1>
 			</div>
 			<div class="bottom-text">
-				<p class="b-margin" align="justify">
-					I'm a 12th grade student at The Shri Ram School, Moulsari
-					and founder of
+				<p class="b-margin">
+					I study at The Shri Ram School, Moulsari
+
+					i did this projects
+
+					i got these languageas
+
+					thats how i used to build this website 
+
+					This website is made with 
+					
+					I plan api in future
+					and founded
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -27,7 +37,7 @@
 						class="orange"
 						href="https://happinessproject.co.in"
 						>Happiness Project</a
-					>. I am also an aspiring developer, and have pursued computer
+					>. I aspire to be a working professional in the technology field, and have pursued computer
 					science for the past 5 years. I know how to code in JS, Java, Python, 
 					and C. This website is set in Gibson, and uses Font Awesome for all the icons.
 					It's coded in Vue.js and uses Netlify functions. I plan to implement some
@@ -38,6 +48,8 @@
 					changes in this website reflect the new skills I learn through my journey of pursuing CS.
 					<br><br>
 					Apart from computer science, I have a keen interest in entrepreneurship,
+
+					I founded ---
 					I also love playing golf! If interested about my work away from computer science, you 
 					can check my
 					<a
