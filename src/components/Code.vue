@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="row">
-			<h1>Projects (Adding projects regularly)</h1>
+			<h1>Projects</h1>
 			<div>
 				<button v-on:click="expandDiv">
 					<i id="chevron" class="fas fa-chevron-down fa-lg"></i>
