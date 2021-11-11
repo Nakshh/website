@@ -35,7 +35,7 @@
 						class="orange"
 						href="https://happinessproject.co.in"
 						>Happiness Project</a
-					>. Not to mention, I love playing golf in my free time. 
+					>, which combines my love for computer science, with socially relevant and impactful outputs, in whatever humble way I can. Not to mention, I love playing golf in my free time. 
 					If you’re interested about my work away from computer science, 
 					you can check my
 					<a
@@ -52,6 +52,8 @@
 						href="CV.pdf"
 						>Resume</a
 					>.
+					<br><br>
+					Id love to connect with other like minded people and create something new together!
 					
 					
 					
