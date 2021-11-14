@@ -5,7 +5,7 @@
 		</div>
 		<ul>
 			<a
-				href="https://twitter.com/nakshhkohli"
+				href="https://twitter.com/nakshhk"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
