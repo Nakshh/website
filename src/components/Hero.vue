@@ -53,7 +53,7 @@
 						>Resume</a
 					>.
 					<br><br>
-					Id love to connect with other like minded people and create something new together!
+					I'd love to connect with other like minded people and create something new together!
 					
 					
 					
