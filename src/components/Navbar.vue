@@ -9,7 +9,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<li class="first"><i class="fab fa-twitter fa-lg"></i></li>
+				<li><i class="fab fa-twitter fa-lg"></i></li>
 			</a>
 			<a
 				href="https://instagram.com/nakshhkohli"
@@ -45,7 +45,7 @@
 				rel="noopener noreferrer"
 			>
 				<li class="last">
-					<div style="color:white">My Resume</div>
+					<div style="color:white">Resume</div>
 				</li>
 			</a>
 	</ul>
@@ -153,7 +153,7 @@ li:hover {
 
 	li {
 		margin-left: 0;
-		margin-right: 2rem;
+		margin-right: 1rem;
 	}
 
 	ul {
