@@ -115,9 +115,9 @@ export default {
 					link: "https://todo-nakshhkohli.netlify.app",
 				},
 				{
-					title: "NASA API",
-					emoji: "🪐",
-					link: "https://nasa-nakshhkohli.netlify.app",
+					title: "News API",
+					emoji: "🗞",
+					link: "https://news-nakshhkohli.netlify.app",
 				}
 			],
 		};
