@@ -64,21 +64,21 @@ export default {
 					emoji: "💮",
 					link: "https://logo-maker-nakshhkohli.netlify.app",
 				},
-				{
+				/* {
 					title: "Mic Visuals",
 					emoji: "🎙",
 					link: "https://mic-nakshhkohli.netlify.app",
-				},
+				},*/
 				{
 					title: "Shrek 3",
 					emoji: "🍿",
 					link: "https://github.com/Nakshh/shrek",
 				},
-				{
+				/*{
 					title: "Chat",
 					emoji: "💬",
 					link: "https://chat-nakshhkohli.netlify.app",
-				},
+				},*/
 				{
 					title: "Fourier",
 					emoji: "⭕️",
