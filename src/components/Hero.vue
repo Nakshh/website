@@ -12,10 +12,6 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					SUHANI IS BAD
-					
-					<br>
-					
 					As an IB student at The Shri Ram School, Moulsari, I take great pride in my work. 
 					In hopes of pursuing computer science, I’ve become fluent in JavaScript, Java, Python, 
 					and C. On this website, you can find all my projects. I created it using Vue.js, and 
