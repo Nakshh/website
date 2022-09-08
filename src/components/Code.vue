@@ -49,11 +49,11 @@ export default {
 					emoji: "🔑",
 					link: "https://cipher-nakshhkohli.netlify.app",
 				},
-				{
+				/**{
 					title: "Rubiks Cube",
 					emoji: "🧊",
 					link: "https://cube-nakshhkohli.netlify.app",
-				},
+				},**/
 				{
 					title: "Game",
 					emoji: "🚀",
