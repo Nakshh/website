@@ -12,8 +12,8 @@
 			</div>
 			<div class="bottom-text">
 				<p class="b-margin">
-					As an IB student at The Shri Ram School, Moulsari, I take great pride in my work. 
-					In hopes of pursuing computer science, I’ve become fluent in JavaScript, Java, Python, 
+					As a Freshman at Purdue University, I take great pride in my work. 
+					I plan to purdure and major in computer science, I’ve become fluent in JavaScript, Java, Python, 
 					and C. On this website, you can find all my projects. I created it using Vue.js, and 
 					it uses Netlify functions; I plan on implementing some APIs in the future. If you’re 
 					interested, you can check out the source code <a class="orange" href="https://www.github.com/nakshh/nakshhkohli.com">here</a>. 
