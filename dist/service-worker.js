@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.43c1b00331c8ca898f852c065a586922.js"
+  "/precache-manifest.a6b4bfcc901a478cc53627e73e328424.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nakshhkohli.com"});

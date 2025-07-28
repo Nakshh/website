@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "node redirects/prebuild.js && vue-cli-service build && netlify-lambda build functions",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider node redirects/prebuild.js && NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build && NODE_OPTIONS=--openssl-legacy-provider netlify-lambda build functions",
     "deploy": "git add -A && git commit -m 'redirects' && git push",
     "start": "npm run serve"
   },
