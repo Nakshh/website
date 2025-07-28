@@ -1,7 +1,0 @@
-
-# all sub redirects
-$APP_REDIRECTS
-
-
-# all github redirects
-https://nakshhkohli.com/gh/* https://github.com/nakshhkohli/:splat 302

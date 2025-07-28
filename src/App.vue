@@ -35,16 +35,13 @@
       <section class="about-section">
         <div class="content">
           <p>
-            I'm currently an intern working on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, trying to find my full-time role in the AI space.
+            I'm a senior at Purdue studying <strong>Computer Science & AI</strong>. Right now, I'm working on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked across <strong>data tooling and system design</strong>.
           </p>
           <p>
-            I've always liked <em>solving the puzzle</em> behind a problem, thinking about why something works, why it doesn't, and what happens if you push it a little further. Most of what I love comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
+            I've always liked <em>figuring things out</em> — why something works, why it doesn't, and what happens if you push it a little further. Most of what I do comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
           </p>
           <p>
-            This site tracks my work, but it's not just a portfolio. It encapsulates a lot more, like the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for old <strong>Audis</strong>, and thought <strong>skydiving</strong> would be a fun hobby that would not rinse my wallet.
-          </p>
-          <p>
-            You'll find a few projects, maybe a few thoughts, and if you catch a bug or a typo, congrats. You've just joined the QA team.
+            This site tracks my work, but it's not just a portfolio. It's also where the rest of me shows up — the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for old <strong>Audis</strong>, and thought <strong>skydiving</strong> would be a fun way to reset before finals. You'll find a few projects, maybe a few thoughts, and if you catch a bug or a typo, congrats. You've just joined the QA team.
           </p>
         </div>
       </section>
@@ -164,20 +161,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      activeTab: 'experience',
-      tabs: [
-        { id: 'experience', name: 'Experience' },
-        { id: 'skills', name: 'Skills' },
-        { id: 'education', name: 'Education' }
-      ]
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const activeTab = ref('experience')
+
+const tabs = [
+  { id: 'experience', name: 'Experience' },
+  { id: 'skills', name: 'Skills' },
+  { id: 'education', name: 'Education' }
+]
 </script>
 
 <style>
@@ -340,13 +333,15 @@ html, body {
   text-align: justify;
 }
 
-.about-section:hover .content p {
-  color: #777;
-}
+@media (hover: hover) and (pointer: fine) {
+  .about-section:hover .content p {
+    color: #777;
+  }
 
-.about-section:hover .content strong,
-.about-section:hover .content em {
-  color: #e1e1e1;
+  .about-section:hover .content strong,
+  .about-section:hover .content em {
+    color: #e1e1e1;
+  }
 }
 
 /* Tab Navigation */
