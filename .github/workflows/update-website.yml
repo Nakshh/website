@@ -1,0 +1,78 @@
+name: Update Website Resume
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  update-website:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download resume PDF from release
+      run: |
+        # Get the latest release download URL
+        DOWNLOAD_URL=$(curl -s "https://api.github.com/repos/${{ github.repository }}/releases/latest" | \
+          grep "browser_download_url.*resume\.pdf" | \
+          cut -d '"' -f 4)
+        
+        echo "Downloading resume from: $DOWNLOAD_URL"
+        curl -L -o resume.pdf "$DOWNLOAD_URL"
+        
+    - name: Verify PDF downloaded
+      run: |
+        if [ ! -f resume.pdf ]; then
+          echo "ERROR: Failed to download resume.pdf"
+          exit 1
+        fi
+        ls -la resume.pdf
+        
+    - name: Checkout website repository
+      uses: actions/checkout@v4
+      with:
+        repository: Nakshh/website
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: website
+        
+    - name: Update resume in website
+      run: |
+        # Copy the new resume PDF to the website's public directory
+        cp resume.pdf website/public/
+        
+        # Also update the main resume file if it exists in root
+        if [ -f "website/Nakshh Kohli Resume June 2025.pdf" ]; then
+          cp resume.pdf "website/Nakshh Kohli Resume June 2025.pdf"
+        fi
+        
+    - name: Check for changes in website
+      id: changes
+      run: |
+        cd website
+        git status --porcelain
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push changes to website
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        cd website
+        git config user.name "Resume Bot"
+        git config user.email "actions@github.com"
+        git add public/resume.pdf
+        if [ -f "Nakshh Kohli Resume June 2025.pdf" ]; then
+          git add "Nakshh Kohli Resume June 2025.pdf"
+        fi
+        git commit -m "🤖 Auto-update resume PDF from ${{ github.repository }}@${{ github.sha }}"
+        git push
+        
+    - name: Create summary
+      run: |
+        echo "## 🎯 Resume Update Complete!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ **Website updated:** https://nakshhkohli.com" >> $GITHUB_STEP_SUMMARY
+        echo "📄 **New resume URL:** https://nakshhkohli.com/resume.pdf" >> $GITHUB_STEP_SUMMARY
+        echo "🔗 **Source commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY 

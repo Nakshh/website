@@ -1,17 +1,40 @@
-# nakshhkohli.com
+# 📄 Automated Resume Pipeline
 
-### 👀 My personal website
+This repository automatically compiles and deploys my resume whenever changes are made.
 
-Hosted at https://nakshhkohli.com
+## 🔄 How it works
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cd076917-b754-4f14-81eb-6b4a049a2bb7/deploy-status)](https://app.netlify.com/sites/nakshh/deploys)
- 
-* Clone the website
-* Grab dependencies with `npm i`
-* Serve with `npm start`
+1. **Edit** `resume.tex` in this repository
+2. **Push** changes to main/master branch  
+3. **GitHub Actions** automatically:
+   - Compiles LaTeX to PDF
+   - Creates a new release with the PDF
+   - Updates the website at https://nakshhkohli.com
 
-Technologies used: Vue.js, Font Awesome
+## 🚀 Features
 
-TODO:
-* Redirects (200!) for each project
-* Make use of REST API
+- ✅ **Automatic PDF compilation** from LaTeX source
+- ✅ **Version tracking** with timestamped releases  
+- ✅ **Website integration** - auto-updates resume link
+- ✅ **Manual triggers** available if needed
+- ✅ **Pull request testing** without publishing
+
+## 📋 Workflow Status
+
+[![Build and Release Resume](https://github.com/Nakshh/resume/actions/workflows/build-resume.yml/badge.svg)](https://github.com/Nakshh/resume/actions/workflows/build-resume.yml)
+
+[![Update Website Resume](https://github.com/Nakshh/resume/actions/workflows/update-website.yml/badge.svg)](https://github.com/Nakshh/resume/actions/workflows/update-website.yml)
+
+## 🔗 Links
+
+- **Latest Resume PDF:** [Download from Releases](https://github.com/Nakshh/resume/releases/latest)
+- **Live Website:** https://nakshhkohli.com
+- **Website Repository:** https://github.com/Nakshh/website
+
+## ⚡ Quick Edit
+
+Want to make a quick change? Edit [`resume.tex`](./resume.tex) directly on GitHub and the pipeline will handle the rest!
+
+---
+
+*Last updated automatically by GitHub Actions* 🤖
