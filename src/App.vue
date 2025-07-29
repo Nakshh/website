@@ -21,7 +21,7 @@
             <a href="https://linkedin.com/in/nakshhkohli" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
               <span class="social-icon">💼</span>
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link" title="Resume">
+            <a href="https://nakshh-resume.netlify.app" target="_blank" rel="noopener noreferrer" class="social-link" title="Resume">
               <span class="social-icon">📄</span>
             </a>
           </div>

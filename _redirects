@@ -81,6 +81,9 @@ https://nakshhkohli.com/lila/* https://lila-nakshhkohli.netlify.app/:splat 200!
 https://nakshhkohli.com/decision https://nakshhkohli.com/decision/index.html 302
 https://nakshhkohli.com/decision/* https://decision-nakshhkohli.netlify.app/:splat 200!
 
+https://nakshhkohli.com/resume https://nakshh-resume.netlify.app 302
+https://resume.nakshhkohli.com/* https://nakshh-resume.netlify.app/:splat 200!
+
 
 # all github redirects
 https://nakshhkohli.com/gh/* https://github.com/nakshhkohli/:splat 302
