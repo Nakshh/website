@@ -1,5 +1,5 @@
 # Resume redirects
-https://nakshhkohli.com/resume https://nakshh-resume.netlify.app 302
+https://nakshhkohli.com/resume https://nakshh-resume.netlify.app 200
 https://resume.nakshhkohli.com/* https://nakshh-resume.netlify.app/:splat 200!
 
 # All sub redirects
