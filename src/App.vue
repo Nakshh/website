@@ -721,12 +721,27 @@ html, body {
   }
   
   .social-link {
-    width: 45px;
+    width: auto;
     height: 45px;
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: none;
   }
   
   .social-icon {
     font-size: 1.3rem;
+    transition: none;
+  }
+  
+  .social-text {
+    font-size: 0.9rem;
+    margin-left: 6px;
+    opacity: 1;
+    width: auto;
+    max-width: none;
+    transform: translateX(0);
+    transition: none;
   }
   
   .name {
@@ -815,6 +830,7 @@ html, body {
     justify-content: flex-start;
     padding-left: 10px;
     padding-right: 10px;
+    transition: none;
   }
   
   .social-links {
@@ -823,6 +839,7 @@ html, body {
   
   .social-icon {
     font-size: 1rem;
+    transition: none;
   }
   
   .social-text {
@@ -830,7 +847,9 @@ html, body {
     margin-left: 6px;
     opacity: 1;
     width: auto;
+    max-width: none;
     transform: translateX(0);
+    transition: none;
   }
   
   /* Mobile Sunglasses */
