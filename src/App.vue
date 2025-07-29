@@ -5,24 +5,39 @@
       <!-- Header Section -->
       <header class="header">
         <div class="profile-section">
-          <img src="./assets/me.jpg" alt="Nakshh Kohli" class="profile-image">
-          <div class="profile-info">
-            <h1 class="name">Nakshh Kohli</h1>
-            <p class="title">Computer Science & AI Student</p>
-            <p class="subtitle">Purdue University • GPA: 3.46 • Class of 2026</p>
+          <div class="profile-image-container">
+            <img src="./assets/me.jpg" alt="Nakshh Kohli" class="profile-image" @click="toggleSunglasses">
+                         <img v-if="showSunglasses" 
+                 src="/glasses.png" 
+                 alt="Cool Sunglasses" 
+                 class="sunglasses" 
+                 :class="{ 
+                   'sunglasses-animate': sunglassesAnimating,
+                   'sunglasses-animate-out': sunglassesAnimatingOut 
+                 }">
           </div>
+                      <div class="profile-info">
+              <h1 class="name">Nakshh Kohli</h1>
+              <p class="title">CS + AI at Purdue</p>
+              <p class="location">📍 West Lafayette, Indiana</p>
+              <p class="status">Open to full-time roles • Graduating May 2026</p>
+            </div>
           <div class="social-links">
             <a href="mailto:kohli16@purdue.edu" class="social-link" title="Email">
-              <span class="social-icon">✉</span>
+              <i class="fas fa-envelope social-icon"></i>
+              <span class="social-text">Email</span>
             </a>
             <a href="https://github.com/nakshh" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-              <span class="social-icon">⚡</span>
+              <i class="fab fa-github social-icon"></i>
+              <span class="social-text">GitHub</span>
             </a>
             <a href="https://linkedin.com/in/nakshhkohli" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-              <span class="social-icon">💼</span>
+              <i class="fab fa-linkedin social-icon"></i>
+              <span class="social-text">LinkedIn</span>
             </a>
-            <a href="https://nakshh-resume.netlify.app" target="_blank" rel="noopener noreferrer" class="social-link" title="Resume">
-              <span class="social-icon">📄</span>
+            <a href="https://resume.nakshhkohli.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Resume">
+              <i class="fas fa-file social-icon"></i>
+              <span class="social-text">Resume</span>
             </a>
           </div>
         </div>
@@ -165,12 +180,37 @@
 import { ref } from 'vue'
 
 const activeTab = ref('experience')
+const showSunglasses = ref(false)
+const sunglassesAnimating = ref(false)
+const sunglassesAnimatingOut = ref(false)
 
 const tabs = [
   { id: 'experience', name: 'Experience' },
   { id: 'skills', name: 'Skills' },
   { id: 'education', name: 'Education' }
 ]
+
+const toggleSunglasses = () => {
+  if (!showSunglasses.value) {
+    // Flying IN
+    showSunglasses.value = true
+    sunglassesAnimating.value = true
+    sunglassesAnimatingOut.value = false
+    // Remove animation class after animation completes
+    setTimeout(() => {
+      sunglassesAnimating.value = false
+    }, 800)
+  } else {
+    // Flying OUT
+    sunglassesAnimatingOut.value = true
+    sunglassesAnimating.value = false
+    // Hide sunglasses after fly-out animation completes
+    setTimeout(() => {
+      showSunglasses.value = false
+      sunglassesAnimatingOut.value = false
+    }, 600)
+  }
+}
 </script>
 
 <style>
@@ -238,21 +278,95 @@ html, body {
 
 .profile-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
   object-fit: cover;
   border: 2px solid #333;
+  transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+}
+
+/* Custom Sunglasses Image */
+.sunglasses {
+  position: absolute;
+  top: 30%;
+  left: 49%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 90px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.sunglasses-animate {
+  animation: flyInSunglasses 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sunglasses-animate-out {
+  animation: flyOutSunglasses 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+@keyframes flyInSunglasses {
+  0% {
+    transform: translateX(-200px) translateY(-100px) rotate(-20deg) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-40px) translateY(10px) rotate(5deg) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-60px) translateY(-5px) rotate(-2deg) scale(0.95);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutSunglasses {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-30px) translateY(-10px) rotate(15deg) scale(1.1);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateX(50px) translateY(-40px) rotate(45deg) scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(250px) translateY(-120px) rotate(90deg) scale(0.3);
+    opacity: 0;
+  }
 }
 
 .profile-info {
   flex: 1;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .name {
@@ -263,52 +377,103 @@ html, body {
 }
 
 .title {
-  font-size: 1.1rem;
-  color: #888;
-  font-weight: 400;
-  margin-bottom: 0.1rem;
+  font-size: 1.2rem;
+  color: #8bb3e0;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
 }
 
-.subtitle {
-  font-size: 0.95rem;
-  color: #666;
+.location {
+  font-size: 1rem;
+  color: #c1c1c1;
   font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status {
+  font-size: 0.85rem;
+  color: #6b9bd1;
+  font-weight: 500;
+  background: rgba(107, 155, 209, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;
+  border: 1px solid rgba(107, 155, 209, 0.2);
+  display: inline-block;
+  letter-spacing: 0.2px;
+  width: fit-content;
 }
 
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  align-items: center;
+  gap: 0.875rem;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #333;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }
 
 .social-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: #6b9bd1;
   transform: translateY(-1px);
+  width: 120px;
+  justify-content: flex-start;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.social-text {
+  font-size: 0.95rem;
+  color: #c1c1c1;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-left: 0;
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
 }
 
 .social-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #c1c1c1;
-  transition: color 0.2s ease;
+  transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  flex-shrink: 0;
 }
 
 .social-link:hover .social-icon {
   color: #ffffff;
+}
+
+.social-link:hover .social-text {
+  opacity: 1;
+  transform: translateX(0);
+  color: #ffffff;
+  max-width: 80px;
+  margin-left: 8px;
 }
 
 .core-pursuit {
@@ -543,16 +708,47 @@ html, body {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    align-items: center;
   }
   
   .social-links {
+    position: static;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .social-icon {
+    font-size: 1.3rem;
   }
   
   .name {
     font-size: 2rem;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: flex-start;
   }
   
   .tab-navigation {
@@ -588,6 +784,23 @@ html, body {
     font-size: 1.8rem;
   }
   
+  .title {
+    font-size: 1rem;
+  }
+  
+  .status {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: flex-start;
+  }
+  
   .tab-button {
     padding: 0.75rem 0.75rem;
     font-size: 0.85rem;
@@ -598,12 +811,31 @@ html, body {
   }
   
   .social-link {
-    width: 36px;
-    height: 36px;
+    width: auto;
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .social-links {
+    position: static;
   }
   
   .social-icon {
     font-size: 1rem;
+  }
+  
+  .social-text {
+    font-size: 0.85rem;
+    margin-left: 6px;
+    opacity: 1;
+    width: auto;
+    transform: translateX(0);
+  }
+  
+  /* Mobile Sunglasses */
+  .sunglasses {
+    width: 80px;
   }
 }
 </style>
