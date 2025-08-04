@@ -1,0 +1,240 @@
+    \documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSmallItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{comment}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://nakshhkohli.com/}{\Large Nakshh Kohli}}
+  &
+  \href{mailto:kohli16@purdue.edu}{kohli16@purdue.edu,} {(765)-772-5454}
+  \\
+  \href{https://nakshhkohli.com/}{\underline{\textit{www.nakshhkohli.com}}}
+  &
+  Valid Employment Authorization Document
+  \\
+  Core Pursuit: \textit{Blend technology for everyday solutions}
+  &
+  CS and AI, Purdue University 2026, GPA: 3.42
+\end{tabular*}
+\end{comment}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \multirow{2}{*}{\textbf{\huge Nakshh Kohli}} 
+  &
+  \href{mailto:kohli16@purdue.edu}{kohli16@purdue.edu,} {(765)-772-5454}
+  \\
+  &
+  Valid Employment Authorization Document
+  \\
+  Core Pursuit: \textit{Blend technology for everyday solutions}
+  &
+  CS and AI, \textbf{Purdue University} 2026, GPA: 3.46
+\end{tabular*}
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+  {DevRev}{Palo Alto, CA}
+  {AI Intern}{May 2025 - Present}
+\begin{comment}
+\resumeItemListStart
+  \resumeItem{Enforced LLM Gateway Controls}
+  {Implemented chat completion support and rejection rules at the gateway level using Go, reducing latency, enforcing usage restrictions, and preventing abuse of public-facing endpoints.}
+  
+  \resumeItem{Developed Usage Tracking and Rate Limiting}
+  {Built token- and model-level interceptors in shared Python and Go services to normalize provider usage, aggregate token counts, and expose summaries for downstream analysis ,  enabling detailed customer tracking, fair rate limiting, and usage-driven business insights.}
+  
+  \resumeItem{Designed LLM Proxy for Global Compliance}
+  {Working on a provider-agnostic LLM proxy to centralize routing, enforce policy, and manage rate limits across regions ,  supporting data residency and pricing constraints for a global customer base.}
+\resumeItemListEnd
+\end{comment}
+
+\resumeItemListStart
+  \resumeItem{LLM Gateway Enforcement}
+  {Engineered chat completion support and rejection rules at the gateway level using Go, reducing latency, enforcing usage restrictions, and preventing abuse of public-facing endpoints.}
+
+  \resumeItem{Usage Analytics and Rate Controls}
+  {Developed token/model-level tracers and interceptors on LangChain, Python, and Go services to normalize provider usage, aggregate token data, and generate detailed analytics,  enabling usage-driven business insights and fair rate limiting.}
+  
+  \resumeItem{LLM Proxy for Global Policy Control}
+  {Designing a provider-agnostic proxy to centralize routing, enforce compliance policies, and manage rate limits across geographic regions, supporting global data residency rules and pricing strategy across cloud providers.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+  {Chariot Command}{West Lafayette, IN}
+  {Software Developer}{Aug 2024 -- May 2025}
+\resumeItemListStart
+  \resumeItem{Thermal Monitoring System}
+    {Engineered a PyQt5 and OpenCV interface to process FLIR thermal and RGB streams, extracting pixel intensity data for region specific temperature tracking and threshold-based alerting.}
+\resumeItem{Multi-Camera Playback System}
+  {Built a multi-threaded playback engine to support 8 sensor units, enabling synchronized logging, diagnostics, and historical navigation with session-aware configuration; finalized the MVP.}
+
+\resumeItemListEnd
+
+
+
+
+
+  
+    \resumeSubheading
+      {Krafton Inc. (PUBG Corporation)}{Madison, WI}
+      {Deep Learning Intern}{Jun 2024 - Aug 2024}
+     \begin{comment}
+      \resumeItemListStart
+    \resumeItem{LLM-Powered Text Clustering Framework}
+        {Developed and deployed a text clustering framework, improving clustering accuracy by 80\% . By adapting the Division head's \href{https://arxiv.org/pdf/2310.18297}{\underline{\textit{image clustering research}}}, developed an LLM powered recommendation system to enhance content relevancy and importantly product feature upgrades.}
+    \resumeItem{Minsimi - AI Community Manager}
+        {Leveraged the clustering framework and a Slackbot interface to deliver data-driven insights through real-time conversations, reducing the product iteration cycle by 2 days. Insights were drawn from monitoring community trends in comment data from over 100 YouTube channels and live streams.}
+      \resumeItemListEnd
+      \end{comment}
+
+\resumeItemListStart
+    \resumeItem{Text Clustering for Feature Upgrades}
+      {Adapted team’s image clustering research into an LLM-based framework that achieved 96\% clustering accuracy on validation data, powering a recommendation system driven by YouTube comments and live chat to prioritize product feature updates based on community demand.}
+
+    \resumeItem{Minsimi - AI-Powered Feedback Slackbot}
+      {Integrated the recommendation system into a conversational Slackbot that delivered insights from 100+ YouTube and stream channels, surfacing real-time community sentiment and trending topics to help product teams identify pain points and guide gameplay improvements.}
+\resumeItemListEnd
+
+
+
+\resumeSubheading
+      {Saama Technologies}{Campbell, CA}
+      {Software Engineering Intern}{May 2023 - Aug 2023}
+\resumeItemListStart
+  \resumeItem{Clinical Setup Automation}
+    {Automated the clinical trial data preparation process by developing modular SQL scripts that eliminated manual setup steps, streamlining the development and testing pipeline for research teams.}
+  \resumeItem{Cross-System Data Analysis with Data Hub}
+    {Executed clinical trial data ingestion, processing, and result analysis using Saama’s Data Hub platform to centralize clinical and operational datasets across research systems.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Early Technical Internships}{New Delhi, India}
+  {Engineering Internships at Infeedo and Fintso}{May 2020 – Aug 2021}
+  \resumeItemListStart
+    \resumeItem{Infeedo (2020)}{Wrote SQL scripts in a SCRUM environment to assist with QA and data integration tasks.}
+    \resumeItem{Fintso (2021)}{Gained exposure to AWS and DevOps, wrote and tested lambda functions.}
+  \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Purdue University}{West Lafayette, IN}
+      {B.S. in Computer Science \& Artificial Intelligence;  GPA: 3.46}{Aug 2022 - May 2026}
+      \resumeItemListStart
+        \resumeItem{Recognition}
+          {Dean's List and Semester Honors (Fall 2022, Spring 2023 and Fall 2023)}
+                  \resumeItem{Key Courses Completed/ In Progress}
+          {CS 577 - Natural Language Processing, CS 373 - Data mining and Machine Learning, CS 381 - Advanced Analysis of Algorithms, CS 251 - Data Structures and Algorithms}
+          \resumeItem{Teaching Assistant for Object Oriented Programming in Java}{60 students each for 3 semesters.}
+         \resumeItem{Department of Computer Science Ambassador}
+             {Providing comprehensive academic guidance to current CS students, addressing their educational needs and career aspirations, including hosting focused events with faculty.}
+        \resumeItem{Guest Center Tour Guide as Alumni Committee Lead}{Tours for prospective students and VIP alumni.}
+
+      \resumeItemListEnd
+   
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+  \item{
+    \textbf{Languages}{: Python, Java, C, R, SQL}}
+    \hfill
+    \textbf{Soft}{: Design Thinking, Technical Writing, Collaboration}
+  \item{
+  \textbf{Stacks}{: AWS, Git, Postgres, Docker, PyTorch, LangChain, REST/gRPC}
+}
+%   \item{
+%     \textbf{Other Passions}{: Golf, Skydiving, Bartending}
+%     \hfill
+%     \textbf{Soft}{: Design Thinking, Technical Writing, Collaboration}
+%   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

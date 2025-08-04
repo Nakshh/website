@@ -48,16 +48,24 @@
 
       <!-- About Section (Always Visible) -->
       <section class="about-section">
-        <div class="content">
+        <div class="content" @mouseenter="hideThoughtBubble">
           <p>
-            I'm a senior at Purdue studying <strong>Computer Science & AI</strong>. Right now, I'm working on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked across <strong>data tooling and system design</strong>.
+            I'm a senior at Purdue studying <strong>Computer Science & AI</strong>. Right now, I'm working on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>.
           </p>
           <p>
             I've always liked <em>figuring things out</em> — why something works, why it doesn't, and what happens if you push it a little further. Most of what I do comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
           </p>
           <p>
-            This site tracks my work, but it's not just a portfolio. It's also where the rest of me shows up — the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for old <strong>Audis</strong>, and thought <strong>skydiving</strong> would be a fun way to reset before finals. You'll find a few projects, maybe a few thoughts, and if you catch a bug or a typo, congrats. You've just joined the QA team.
+            This site tracks my work, but it's not just a portfolio. It's also where the rest of me shows up — the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for my <strong>Audi</strong>, and thought <strong>skydiving</strong> would be a fun way to stay grounded.
           </p>
+        </div>
+        
+        <!-- Thought Bubble Hint -->
+        <div v-if="showThoughtBubble" class="thought-bubble" :class="{ 'fading-out': thoughtBubbleFadingOut }" @click="hideThoughtBubble">
+          <div class="bubble-content">
+            Hover for keywords! 💡
+          </div>
+          <div class="bubble-tail"></div>
         </div>
       </section>
 
@@ -142,20 +150,70 @@
 
         <!-- Skills Tab -->
         <div v-show="activeTab === 'skills'" class="tab-panel">
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Languages</h4>
-              <p>Python, Java, C, R, SQL</p>
+          <div class="skills-section">
+            <div class="skills-row">
+              <h4 class="skills-row-title">Languages</h4>
+              <div class="skills-icons">
+                <div class="skill-item">
+                  <i class="fab fa-python skill-icon"></i>
+                  <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-java skill-icon"></i>
+                  <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-code skill-icon"></i>
+                  <span class="skill-name">C</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-r-project skill-icon"></i>
+                  <span class="skill-name">R</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-database skill-icon"></i>
+                  <span class="skill-name">SQL</span>
+                </div>
+              </div>
             </div>
-            <div class="skill-category">
-              <h4>Technologies</h4>
-              <p>AWS, Git, PostgreSQL, Docker, PyTorch, LangChain, REST/gRPC</p>
-            </div>
-            <div class="skill-category">
-              <h4>Soft Skills</h4>
-              <p>Design Thinking, Technical Writing, Collaboration</p>
+            
+            <div class="skills-row">
+              <h4 class="skills-row-title">Technologies</h4>
+              <div class="skills-icons">
+                <div class="skill-item">
+                  <i class="fab fa-aws skill-icon"></i>
+                  <span class="skill-name">AWS</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-git-alt skill-icon"></i>
+                  <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-database skill-icon"></i>
+                  <span class="skill-name">PostgreSQL</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-docker skill-icon"></i>
+                  <span class="skill-name">Docker</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-brain skill-icon"></i>
+                  <span class="skill-name">PyTorch</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-link skill-icon"></i>
+                  <span class="skill-name">LangChain</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-network-wired skill-icon"></i>
+                  <span class="skill-name">REST/gRPC</span>
+                </div>
+              </div>
             </div>
           </div>
+          <p class="skills-disclaimer">
+            I have varying levels of experience with many other popular languages and frameworks, but these represent the technologies I have the most knowledge with and enjoy working with most.
+          </p>
         </div>
 
         <!-- Education Tab -->
@@ -164,8 +222,16 @@
             <div class="education-item">
               <h3>Bachelor of Science in Computer Science & Artificial Intelligence</h3>
               <p class="education-details">Purdue University • West Lafayette, IN • Aug 2022 - May 2026</p>
-              <p><strong>GPA:</strong> 3.46 • <strong>Recognition:</strong> Dean's List and Semester Honors</p>
-              <p><strong>Key Courses:</strong> Natural Language Processing, Data Mining & Machine Learning, Advanced Analysis of Algorithms, Data Structures and Algorithms</p>
+              <p><strong>GPA:</strong> 3.46</p>
+              <p><strong>Recognition:</strong> Dean's List and Semester Honors (Fall 2022, Spring 2023, Fall 2023)</p>
+              <p><strong>Key Courses:</strong> CS 577 - Natural Language Processing, CS 373 - Data Mining & Machine Learning, CS 381 - Advanced Analysis of Algorithms, CS 251 - Data Structures and Algorithms</p>
+              
+              <div style="margin-top: 1.5rem;">
+                <h4 style="color: #8bb3e0; margin-bottom: 0.75rem; font-size: 1rem;">Leadership & Teaching</h4>
+                <p><strong>Teaching Assistant for Object Oriented Programming in Java:</strong> Mentored 60 students each semester for 3 consecutive semesters, providing guidance on programming concepts and best practices.</p>
+                <p><strong>Department of Computer Science Ambassador:</strong> Provide comprehensive academic guidance to current CS students, addressing their educational needs and career aspirations, including hosting focused events with faculty.</p>
+                <p><strong>Guest Center Tour Guide as Alumni Committee Lead:</strong> Lead tours for prospective students and VIP alumni, representing the university and department.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -177,12 +243,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const activeTab = ref('experience')
 const showSunglasses = ref(false)
 const sunglassesAnimating = ref(false)
 const sunglassesAnimatingOut = ref(false)
+const showThoughtBubble = ref(false)
+const thoughtBubbleFadingOut = ref(false)
 
 const tabs = [
   { id: 'experience', name: 'Experience' },
@@ -211,6 +279,28 @@ const toggleSunglasses = () => {
     }, 600)
   }
 }
+
+const hideThoughtBubble = () => {
+  if (showThoughtBubble.value && !thoughtBubbleFadingOut.value) {
+    thoughtBubbleFadingOut.value = true
+    // Hide completely after fade-out animation
+    setTimeout(() => {
+      showThoughtBubble.value = false
+      thoughtBubbleFadingOut.value = false
+    }, 600)
+  }
+}
+
+// Show thought bubble after 5 seconds on page load
+onMounted(() => {
+  setTimeout(() => {
+    showThoughtBubble.value = true
+    // Auto-hide after 10 seconds
+    setTimeout(() => {
+      hideThoughtBubble()
+    }, 10000)
+  }, 5000)
+})
 </script>
 
 <style>
@@ -299,8 +389,33 @@ html, body {
   transition: transform 0.2s ease;
 }
 
-.profile-image:hover {
-  transform: scale(1.02);
+/* Desktop hover effects only */
+@media (hover: hover) {
+  .profile-image:hover {
+    transform: scale(1.02);
+  }
+
+  .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #6b9bd1;
+    transform: translateY(-1px);
+    width: 120px;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .social-link:hover .social-icon {
+    color: #ffffff;
+  }
+
+  .social-link:hover .social-text {
+    opacity: 1;
+    transform: translateX(0);
+    color: #ffffff;
+    max-width: 80px;
+    margin-left: 8px;
+  }
 }
 
 /* Custom Sunglasses Image */
@@ -434,14 +549,11 @@ html, body {
   position: relative;
 }
 
-.social-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: #6b9bd1;
-  transform: translateY(-1px);
-  width: 120px;
-  justify-content: flex-start;
-  padding-left: 12px;
-  padding-right: 12px;
+.social-icon {
+  font-size: 1.5rem;
+  color: #c1c1c1;
+  transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  flex-shrink: 0;
 }
 
 .social-text {
@@ -455,25 +567,6 @@ html, body {
   white-space: nowrap;
   max-width: 0;
   overflow: hidden;
-}
-
-.social-icon {
-  font-size: 1.5rem;
-  color: #c1c1c1;
-  transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  flex-shrink: 0;
-}
-
-.social-link:hover .social-icon {
-  color: #ffffff;
-}
-
-.social-link:hover .social-text {
-  opacity: 1;
-  transform: translateX(0);
-  color: #ffffff;
-  max-width: 80px;
-  margin-left: 8px;
 }
 
 .core-pursuit {
@@ -506,6 +599,88 @@ html, body {
   .about-section:hover .content strong,
   .about-section:hover .content em {
     color: #e1e1e1;
+  }
+}
+
+/* Thought Bubble - Desktop Only */
+@media (min-width: 769px) {
+  .about-section {
+    position: relative;
+  }
+
+  .thought-bubble {
+    position: absolute;
+    top: 20%;
+    right: -180px;
+    z-index: 15;
+    animation: bubbleFadeIn 0.8s ease-out;
+    cursor: pointer;
+  }
+
+  .thought-bubble.fading-out {
+    animation: bubbleFadeOut 0.6s ease-in forwards;
+  }
+
+  .bubble-content {
+    background: rgba(136, 136, 136, 0.15);
+    border: 1px solid rgba(136, 136, 136, 0.3);
+    color: #999;
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .bubble-content:hover {
+    background: rgba(136, 136, 136, 0.25);
+    border-color: rgba(136, 136, 136, 0.5);
+    color: #bbb;
+  }
+
+  .bubble-tail {
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid rgba(136, 136, 136, 0.15);
+  }
+
+  @keyframes bubbleFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-5px) scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes bubbleFadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    40% {
+      opacity: 0.6;
+      transform: translateY(-3px) scale(0.95);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.8);
+    }
   }
 }
 
@@ -665,23 +840,82 @@ html, body {
 }
 
 /* Skills */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.skill-category h4 {
-  font-size: 1rem;
+.skills-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-row-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
+  color: #8bb3e0;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.skill-category p {
-  font-size: 0.95rem;
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  width: 70px;
+  height: 70px;
+}
+
+.skill-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #6b9bd1;
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  color: #6b9bd1;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  color: #8bb3e0;
+}
+
+.skill-name {
+  font-size: 0.7rem;
   color: #c1c1c1;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.skills-disclaimer {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  text-align: center;
   line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Education */
@@ -785,8 +1019,32 @@ html, body {
     margin-left: 0;
   }
   
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .skills-section {
+    gap: 1.5rem;
+  }
+  
+  .skills-icons {
+    gap: 0.75rem;
+  }
+  
+  .skill-item {
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.25rem;
+  }
+  
+  .skill-name {
+    font-size: 0.65rem;
+  }
+  
+  .skills-disclaimer {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    padding: 0 1rem;
   }
 }
 
