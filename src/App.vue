@@ -50,7 +50,7 @@
       <section class="about-section">
         <div class="content" @mouseenter="hideThoughtBubble">
           <p>
-            I'm a senior at Purdue studying <strong>Computer Science & AI</strong>. Right now, I'm working on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>.
+            I recently graduated from Purdue with a degree in <strong>Computer Science & AI</strong>. Most recently, I worked on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>.
           </p>
           <p>
             I've always liked <em>figuring things out</em> — why something works, why it doesn't, and what happens if you push it a little further. Most of what I do comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
@@ -94,12 +94,12 @@
                   <h3>AI Intern</h3>
                   <span class="company">DevRev • Palo Alto, CA</span>
                 </div>
-                <span class="duration">May 2025 - Present</span>
+                <span class="duration">May 2025 - Aug 2025</span>
               </div>
               <ul class="experience-details">
                 <li>Engineered chat completion support and rejection rules at the gateway level using Go, reducing latency and preventing abuse</li>
                 <li>Developed token/model-level tracers on LangChain, Python, and Go services for usage analytics and rate limiting</li>
-                <li>Designing provider-agnostic proxy for global policy control and compliance across geographic regions</li>
+                <li>Designed provider-agnostic proxy for global policy control and compliance across geographic regions</li>
               </ul>
             </div>
 
