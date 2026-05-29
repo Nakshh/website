@@ -18,12 +18,12 @@
           </div>
                       <div class="profile-info">
               <h1 class="name">Nakshh Kohli</h1>
-              <p class="title">CS + AI at Purdue</p>
+              <p class="title">CS & AI · Purdue '26</p>
               <p class="location">📍 West Lafayette, Indiana</p>
-              <p class="status">Open to full-time roles • Graduating May 2026</p>
+              <p class="status">Open to full-time roles • Available now</p>
             </div>
           <div class="social-links">
-            <a href="mailto:kohli16@purdue.edu" class="social-link" title="Email">
+            <a href="mailto:nakshh764@gmail.com" class="social-link" title="Email">
               <i class="fas fa-envelope social-icon"></i>
               <span class="social-text">Email</span>
             </a>
@@ -50,13 +50,13 @@
       <section class="about-section">
         <div class="content" @mouseenter="hideThoughtBubble">
           <p>
-            I recently graduated from Purdue with a degree in <strong>Computer Science & AI</strong>. Most recently, I worked on <strong>LLM infrastructure</strong> at <strong>DevRev</strong>, writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>.
-          </p>
-          <p>
-            I've always liked <em>figuring things out</em> — why something works, why it doesn't, and what happens if you push it a little further. Most of what I do comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
+            I recently graduated from Purdue with a degree in <strong>Computer Science & AI</strong>. Most recently, I built <strong>LLM infrastructure</strong> at <strong>DevRev</strong> — writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>. I'm now looking for full-time <strong>software engineering</strong> or <strong>AI</strong> roles where I can keep building things that matter.
           </p>
           <p>
             This site tracks my work, but it's not just a portfolio. It's also where the rest of me shows up — the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for my <strong>Audi</strong>, and thought <strong>skydiving</strong> would be a fun way to stay grounded.
+          </p>
+          <p>
+            I've always liked <em>figuring things out</em> — why something works, why it doesn't, and what happens if you push it a little further. Most of what I do comes down to <strong>logic</strong>, <strong>structure</strong>, and getting the pieces to fit cleanly.
           </p>
         </div>
         
@@ -99,7 +99,7 @@
               <ul class="experience-details">
                 <li>Engineered chat completion support and rejection rules at the gateway level using Go, reducing latency and preventing abuse</li>
                 <li>Developed token/model-level tracers on LangChain, Python, and Go services for usage analytics and rate limiting</li>
-                <li>Designed provider-agnostic proxy for global policy control and compliance across geographic regions</li>
+                <li>Shipped provider-agnostic LLM proxy to production, enabling global policy control and compliance enforcement across geographic regions</li>
               </ul>
             </div>
 
@@ -127,7 +127,7 @@
               </div>
               <ul class="experience-details">
                 <li>Developed LLM-based text clustering framework achieving 96% accuracy for product feature prioritization</li>
-                <li>Created Minsimi AI Slackbot delivering insights from 100+ YouTube channels for community sentiment analysis</li>
+                <li>Deployed Minsimi AI Slackbot company-wide, surfacing real-time community sentiment from 100+ YouTube and Twitch channels on each PUBG update cycle</li>
               </ul>
             </div>
 
@@ -141,7 +141,7 @@
               </div>
               <ul class="experience-details">
                 <li>Automated clinical trial data preparation with modular SQL scripts, streamlining development pipeline</li>
-                <li>Executed data ingestion and analysis using Saama's Data Hub platform for clinical research</li>
+                <li>Ingested and analyzed multi-source clinical trial datasets to support research pipeline delivery and reporting</li>
               </ul>
             </div>
 
@@ -157,6 +157,10 @@
                 <div class="skill-item">
                   <i class="fab fa-python skill-icon"></i>
                   <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-code skill-icon"></i>
+                  <span class="skill-name">Go</span>
                 </div>
                 <div class="skill-item">
                   <i class="fab fa-java skill-icon"></i>
@@ -221,9 +225,8 @@
           <div class="content">
             <div class="education-item">
               <h3>Bachelor of Science in Computer Science & Artificial Intelligence</h3>
-              <p class="education-details">Purdue University • West Lafayette, IN • Aug 2022 - May 2026</p>
+              <p class="education-details">Purdue University • West Lafayette, IN • Aug 2022 – May 2026</p>
               <p><strong>GPA:</strong> 3.46</p>
-              <p><strong>Recognition:</strong> Dean's List and Semester Honors (Fall 2022, Spring 2023, Fall 2023)</p>
               <p><strong>Key Courses:</strong> CS 577 - Natural Language Processing, CS 373 - Data Mining & Machine Learning, CS 381 - Advanced Analysis of Algorithms, CS 251 - Data Structures and Algorithms</p>
               
               <div style="margin-top: 1.5rem;">
