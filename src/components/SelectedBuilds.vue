@@ -119,8 +119,27 @@ import siteHero from '../assets/site-hero.jpg'
 
 const projects = [
   {
-    id: 'sherlock-gpt',
+    id: 'mdsearch',
     number: '01',
+    name: 'mdsearch',
+    tagline: 'Semantic search over a folder of markdown notes — finds what a note is about, not just what words it uses. Published to PyPI, with an MCP server so Claude can search your vault directly.',
+    facts: [
+      { label: 'PIPELINE', value: 'Heading-aware chunking -> local sentence-transformers embeddings -> FAISS' },
+      { label: 'PERFORMANCE', value: 'SHA256 file manifest for incremental re-index — unchanged vaults re-index in ~0.01s' },
+      { label: 'ROLE', value: 'Built chunker, embedding/index pipeline, CLI & MCP server; shipped to PyPI' },
+    ],
+    stack: ['Python', 'FAISS', 'sentence-transformers', 'Typer', 'MCP'],
+    status: 'OPERATIONAL',
+    year: '2026',
+    github: 'https://github.com/Nakshh/mdsearch',
+    live: 'https://pypi.org/project/mdsearch-cli/',
+    accent: '#5ee6a0',
+    icon: 'fa-magnifying-glass-chart',
+    image: mdsearchDemo,
+  },
+  {
+    id: 'sherlock-gpt',
+    number: '02',
     name: 'Sherlock GPT',
     tagline: 'A 9.6M-parameter transformer trained from scratch on the Sherlock Holmes canon, with an interactive terminal chat interface.',
     facts: [
@@ -139,7 +158,7 @@ const projects = [
   },
   {
     id: 'wireframe-viewer',
-    number: '02',
+    number: '03',
     name: '3D Wireframe Viewer',
     tagline: 'A browser-based OBJ model viewer with a software 3D pipeline built from scratch — no WebGL, no Three.js, just math and a 2D canvas.',
     facts: [
@@ -155,25 +174,6 @@ const projects = [
     accent: '#7dd3e0',
     icon: 'fa-cube',
     image: wireframeViewer,
-  },
-  {
-    id: 'mdsearch',
-    number: '03',
-    name: 'mdsearch',
-    tagline: 'Semantic search over a folder of markdown notes — finds what a note is about, not just what words it uses. Published to PyPI, with an MCP server so Claude can search your vault directly.',
-    facts: [
-      { label: 'PIPELINE', value: 'Heading-aware chunking -> local sentence-transformers embeddings -> FAISS' },
-      { label: 'PERFORMANCE', value: 'SHA256 file manifest for incremental re-index — unchanged vaults re-index in ~0.01s' },
-      { label: 'ROLE', value: 'Built chunker, embedding/index pipeline, CLI & MCP server; shipped to PyPI' },
-    ],
-    stack: ['Python', 'FAISS', 'sentence-transformers', 'Typer', 'MCP'],
-    status: 'OPERATIONAL',
-    year: '2026',
-    github: 'https://github.com/Nakshh/mdsearch',
-    live: 'https://pypi.org/project/mdsearch-cli/',
-    accent: '#5ee6a0',
-    icon: 'fa-magnifying-glass-chart',
-    image: mdsearchDemo,
   },
   {
     id: 'site',
