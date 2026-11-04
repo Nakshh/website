@@ -41,6 +41,8 @@ for (const [label, viewport] of [
       if (actual !== href) throw new Error(label + ' link has wrong URL: ' + actual)
     }
     const background = await page.locator('body').evaluate(el => getComputedStyle(el).backgroundColor)
+    if (background !== 'rgb(243, 238, 230)') throw new Error('Unexpected theme in ' + scheme + ': ' + background)
+    if (await page.locator('#photo-interaction, .sunglasses, .photo-trigger').count()) throw new Error('Removed portrait interaction still present')
     await page.screenshot({ path: 'screenshots/' + label + '-' + scheme + '.png', fullPage: true, animations: 'disabled' })
     const links = await page.locator('.contact').boundingBox()
     const scrollNeeded = links ? Math.max(0, Math.ceil(links.y + links.height - viewport.height)) : null
@@ -55,11 +57,6 @@ for (const [label, viewport] of [
       const clip = await page.evaluate(() => navigator.clipboard.readText())
       if (clip !== 'nakshh764@gmail.com') throw new Error('Wrong clipboard contents')
 
-      await page.getByRole('button', { name: 'Toggle sunglasses on portrait' }).click()
-      if (await page.locator('.sunglasses').count() !== 1) throw new Error('Sunglasses missing')
-      await page.getByRole('button', { name: 'Toggle sunglasses on portrait' }).click()
-      await page.waitForTimeout(650)
-      if (await page.locator('.sunglasses').count() !== 0) throw new Error('Sunglasses did not dismiss')
     }
     await context.close()
   }

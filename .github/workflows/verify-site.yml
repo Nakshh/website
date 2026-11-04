@@ -2,7 +2,7 @@ name: Verify editorial site
 on:
   push:
     branches:
-      - redesign/editorial-calling-card
+      - main
     paths:
       - 'src/**'
       - 'index.html'
@@ -39,16 +39,10 @@ jobs:
             sleep 1
           done
           node scripts/verify-site.mjs
-          export CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
-          npx --yes lighthouse@12.8.2 http://127.0.0.1:4173/ \
-            --chrome-flags="--headless=new --no-sandbox" \
-            --only-categories=performance,accessibility,best-practices,seo \
-            --output=json --output-path=screenshots/lighthouse-mobile.json --quiet
-          node -e "const r=require('./screenshots/lighthouse-mobile.json'); console.log('Lighthouse mobile:', Object.entries(r.categories).map(([k,v])=>k+'='+Math.round(v.score*100)).join(' '))"
       - name: Screenshots and verification report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: editorial-desktop-mobile-light-dark
+          name: editorial-light-theme-all-viewport-checks
           path: screenshots/
           if-no-files-found: warn
