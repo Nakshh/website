@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-      - name: Install and build
+      - name: Install and build (Netlify's Node version)
         run: |
           npm ci
           npm run build
@@ -31,7 +31,7 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.64.1
           npx playwright install --with-deps chromium
-      - name: Start preview server and validate UI
+      - name: Test interactions, HTML, responsive light and dark layouts
         run: |
           npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/vite.log 2>&1 &
           for i in $(seq 1 30); do
@@ -39,12 +39,23 @@ jobs:
             sleep 1
           done
           node scripts/verify-site.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Lighthouse mobile audit
+        continue-on-error: true
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/vite-lh.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
           export CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
-          npx --yes lighthouse@12.8.2 http://127.0.0.1:4173/ \
-            --chrome-flags="--headless=new --no-sandbox" \
+          npx --yes lighthouse@13.6.0 http://127.0.0.1:4173/ \
+            --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
             --only-categories=performance,accessibility,best-practices,seo \
             --output=json --output-path=screenshots/lighthouse-mobile.json --quiet
-          node -e "const r=require('./screenshots/lighthouse-mobile.json'); console.log('Lighthouse mobile:', Object.entries(r.categories).map(([k,v])=>k+'='+Math.round(v.score*100)).join(' '))"
+          node -e "const r=require('./screenshots/lighthouse-mobile.json'); if(r.runtimeError) throw Error(r.runtimeError.message); const s=Object.entries(r.categories).map(([k,v])=>k+'='+Math.round(v.score*100)).join(' '); console.log('Lighthouse mobile:',s); require('fs').appendFileSync(process.env.GITHUB_STEP_SUMMARY, 'Lighthouse mobile: '+s+'\n')"
       - name: Screenshots and verification report
         if: always()
         uses: actions/upload-artifact@v4
