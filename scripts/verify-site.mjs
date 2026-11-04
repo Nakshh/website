@@ -30,7 +30,7 @@ for (const [label, viewport] of [
     }))
 
     if (await page.locator('h1').innerText() !== 'Nakshh Kohli') throw new Error('Missing name')
-    if (!(await page.locator('.role').innerText()).includes('Hang Ten Systems')) throw new Error('Missing role')
+    if (!(await page.locator('.role').textContent()).includes('Hang Ten Systems')) throw new Error('Missing role')
     for (const [label, href] of [
       ['Email', 'mailto:nakshh764@gmail.com'],
       ['LinkedIn', 'https://linkedin.com/in/nakshhkohli'],

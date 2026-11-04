@@ -6,25 +6,25 @@ The page's identity and metadata are rendered directly in index.html so search e
 
 ## Develop
 
-\`\`\`sh
+```sh
 npm install
 npm run dev
-\`\`\`
+```
 
 ## Build
 
-\`\`\`sh
+```sh
 npm run build
 npm run preview
-\`\`\`
+```
 
-Netlify builds with \`npm run build\` and publishes \`dist\`. Do not commit \`dist\` or generated output.
+Netlify builds with `npm run build` and publishes `dist`. Do not commit `dist` or generated output.
 
 ## Assets
 
-- \`src/assets/me.jpeg\` — portrait
-- \`public/glasses.png\` — hidden portrait interaction
-- \`public/og-image.jpg\` — social preview
-- \`public/fonts/InstrumentSerif-Regular.ttf\` — Instrument Serif under the SIL Open Font License (\`public/fonts/OFL.txt\`)
+- `src/assets/me.jpeg` — portrait
+- `public/glasses.png` — hidden portrait interaction
+- `public/og-image.jpg` — social preview
+- `public/fonts/InstrumentSerif-Regular.ttf` — Instrument Serif under the SIL Open Font License (`public/fonts/OFL.txt`)
 
-The HTML title, description, and public links live in \`index.html\`. Contact copy and interactive behavior live in \`src/main.js\`.
+The HTML title, description, and public links live in `index.html`. Contact copy and interactive behavior live in `src/main.js`.

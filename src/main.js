@@ -57,7 +57,18 @@ createApp({
         clearTimeout(timer)
         timer = setTimeout(() => { label.value = 'Copy' }, 2000)
       } catch {
-        label.value = 'Select email'
+        // Fallback for browsers that disable the async Clipboard API.
+        const field = document.createElement('textarea')
+        field.value = 'nakshh764@gmail.com'
+        field.setAttribute('readonly', '')
+        field.style.position = 'fixed'
+        field.style.opacity = '0'
+        document.body.appendChild(field)
+        field.select()
+        let copied = false
+        try { copied = document.execCommand('copy') } catch { /* clipboard unavailable */ }
+        field.remove()
+        label.value = copied ? 'Copied' : 'Copy failed'
         clearTimeout(timer)
         timer = setTimeout(() => { label.value = 'Copy' }, 2000)
       }
