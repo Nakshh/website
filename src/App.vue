@@ -8,7 +8,7 @@
           <header class="header">
             <div class="profile-section">
               <div class="profile-image-container">
-                <img src="./assets/me.png" alt="Nakshh Kohli" class="profile-image" @click="toggleSunglasses">
+                <img src="./assets/me.jpeg" alt="Nakshh Kohli" class="profile-image" @click="toggleSunglasses">
                 <img v-if="showSunglasses"
                      src="/glasses.png"
                      alt="Cool Sunglasses"
