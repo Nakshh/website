@@ -20,9 +20,9 @@
               </div>
               <div class="profile-info">
                 <h1 class="name">Nakshh Kohli</h1>
-                <p class="title">CS & AI · Purdue '26</p>
-                <p class="location">📍 West Lafayette, Indiana</p>
-                <p class="status">Open to full-time roles • Available now</p>
+                <p class="title">Software Engineer · Hang Ten Systems</p>
+                <p class="location">📍 Menlo Park, California</p>
+                <p class="status">CS & AI · Purdue '26</p>
               </div>
               <div class="social-links">
                 <a href="mailto:nakshh764@gmail.com" class="social-link" title="Email">
@@ -51,7 +51,7 @@
           <div class="about-section">
             <div class="content">
               <p>
-                I recently graduated from Purdue with a degree in <strong>Computer Science & AI</strong>. Most recently, I built <strong>LLM infrastructure</strong> at <strong>DevRev</strong> — writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>. I'm now looking for full-time <strong>software engineering</strong> or <strong>AI</strong> roles where I can keep building things that matter.
+                I'm a <strong>Software Engineer at Hang Ten Systems</strong>, based in <strong>Menlo Park, California</strong>. I recently graduated from Purdue with a degree in <strong>Computer Science & AI</strong>. Previously, I built <strong>LLM infrastructure</strong> at <strong>DevRev</strong> — writing code that runs in production and scales with users. Before that, I built a <strong>thermal diagnostics dashboard</strong> for <strong>agri-machinery</strong> and worked at <strong>Krafton</strong> on <strong>text clustering</strong> and <strong>recommendation systems</strong>.
               </p>
               <p>
                 This site tracks my work, but it's not just a portfolio. It's also where the rest of me shows up — the part that spends too much time curating <strong>DJ sets</strong>, has a soft spot for my <strong>Audi</strong>, and thought <strong>skydiving</strong> would be a fun way to stay grounded.
