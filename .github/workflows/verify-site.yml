@@ -1,0 +1,54 @@
+name: Verify editorial site
+on:
+  push:
+    branches:
+      - redesign/editorial-calling-card
+    paths:
+      - 'src/**'
+      - 'index.html'
+      - 'public/**'
+      - 'scripts/verify-site.mjs'
+      - '.github/workflows/verify-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+      - name: Install browser test runner
+        run: |
+          npm install --no-save --package-lock=false playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Start preview server and validate UI
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/vite.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/verify-site.mjs
+          export CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
+          npx --yes lighthouse@12.8.2 http://127.0.0.1:4173/ \
+            --chrome-flags="--headless=new --no-sandbox" \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=json --output-path=screenshots/lighthouse-mobile.json --quiet
+          node -e "const r=require('./screenshots/lighthouse-mobile.json'); console.log('Lighthouse mobile:', Object.entries(r.categories).map(([k,v])=>k+'='+Math.round(v.score*100)).join(' '))"
+      - name: Screenshots and verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-desktop-mobile-light-dark
+          path: screenshots/
+          if-no-files-found: warn

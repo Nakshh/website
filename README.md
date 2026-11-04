@@ -1,17 +1,30 @@
 # nakshhkohli.com
 
-### 👀 My personal website
+Personal site for Nakshh Kohli. Built with Vue 3 + Vite, deployed on Netlify.
 
-Hosted at https://nakshhkohli.com
+The page's identity and metadata are rendered directly in index.html so search engines and social scrapers can read them without JavaScript. Vue enhances only the portrait easter egg and email-copy control.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cd076917-b754-4f14-81eb-6b4a049a2bb7/deploy-status)](https://app.netlify.com/sites/nakshh/deploys)
- 
-* Clone the website
-* Grab dependencies with `npm i`
-* Serve with `npm start`
+## Develop
 
-Technologies used: Vue.js, Font Awesome
+```sh
+npm install
+npm run dev
+```
 
-TODO:
-* Redirects (200!) for each project
-* Make use of REST API
+## Build
+
+```sh
+npm run build
+npm run preview
+```
+
+Netlify builds with `npm run build` and publishes `dist`. Do not commit `dist` or generated output.
+
+## Assets
+
+- `src/assets/me.jpeg` — portrait
+- `public/glasses.png` — hidden portrait interaction
+- `public/og-image.jpg` — social preview
+- `public/fonts/InstrumentSerif-Regular.ttf` — Instrument Serif under the SIL Open Font License (`public/fonts/OFL.txt`)
+
+The HTML title, description, and public links live in `index.html`. Contact copy and interactive behavior live in `src/main.js`.
