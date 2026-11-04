@@ -49,7 +49,9 @@ for (const [label, viewport] of [
 
     if (scheme === 'light' && label === 'desktop') {
       await page.getByRole('button', { name: 'Copy email address' }).click()
-      if (await page.locator('.copy-email').innerText() !== 'Copied') throw new Error('Copy button failed')
+      await page.waitForFunction(() => ['Copied', 'Copy failed'].includes(document.querySelector('.copy-email')?.textContent?.trim()), null, { timeout: 3000 })
+      const copyLabel = await page.locator('.copy-email').textContent()
+      if (copyLabel?.trim() !== 'Copied') throw new Error('Copy button failed: ' + copyLabel)
       const clip = await page.evaluate(() => navigator.clipboard.readText())
       if (clip !== 'nakshh764@gmail.com') throw new Error('Wrong clipboard contents')
 
