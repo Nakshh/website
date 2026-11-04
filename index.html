@@ -30,15 +30,20 @@
     <main class="page">
       <div class="composition">
         <figure class="portrait reveal-photo">
-          <img
-            class="portrait-image"
-            src="/src/assets/me.jpeg"
-            width="1122"
-            height="1402"
-            alt="Portrait of Nakshh Kohli"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/portraits/portrait-480.webp 480w, /portraits/portrait-960.webp 960w"
+              sizes="(max-width: 850px) calc(100vw - 36px), 48vw"
+            />
+            <img
+              class="portrait-image"
+              src="/src/assets/me.jpeg"
+              alt="Portrait of Nakshh Kohli"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <div id="photo-interaction" class="photo-interaction"></div>
         </figure>
 

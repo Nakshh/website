@@ -58,6 +58,7 @@ a:focus-visible, button:focus-visible {
   min-height: 420px;
   background: #D9CEC0;
 }
+.portrait picture { display: block; width: 100%; height: 100%; }
 .portrait-image {
   display: block;
   width: 100%;
